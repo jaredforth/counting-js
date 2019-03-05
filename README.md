@@ -1,5 +1,5 @@
 # countup-js
 
-_ A lightweight library that counts _ 
+_A lightweight library that counts_
 
-** IN DEVELOPMENT **
+**IN DEVELOPMENT**
