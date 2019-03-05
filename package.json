@@ -1,5 +1,5 @@
 {
-  "name": "countup-js",
+  "name": "counting-js",
   "version": "1.0.0",
   "description": "A lightweight library that counts",
   "main": "app.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaredforth/countup-js.git"
+    "url": "git+https://github.com/jaredforth/counting-js.git"
   },
   "author": "Jared Forth <jaredforthdev@gmail.com> (https://www.jaredforth.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaredforth/countup-js/issues"
+    "url": "https://github.com/jaredforth/counting-js/issues"
   },
-  "homepage": "https://github.com/jaredforth/countup-js#readme",
+  "homepage": "https://github.com/jaredforth/counting-js#readme",
   "dependencies": {
     "typescript": "^3.3.3333"
   }
