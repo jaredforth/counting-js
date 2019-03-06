@@ -7,9 +7,7 @@ class Main {
     this.id = elementId;
     this.speed = countSpeed;
 
-    const handler = new ElementHandler;
-    const el = handler.getElement(this.id);
-    console.log(el);
+    const handler = new ElementHandler(this.id);
     } 
 }
 
