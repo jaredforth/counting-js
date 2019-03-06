@@ -4,7 +4,7 @@
   "description": "A lightweight library that counts",
   "main": "dist/app.js",
   "scripts": {
-    "dev": "tsc",
+    "dev": "browserify src/app.ts -p [ tsify --noImplicitAny ] > dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/jaredforth/counting-js#readme",
   "devDependencies": {
+    "browserify": "^16.2.3",
+    "tsify": "^4.0.1",
     "typescript": "^3.3.3333"
   }
 }
