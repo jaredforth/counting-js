@@ -1,6 +1,6 @@
 export interface ElementData {
     el: HTMLElement | null,
-    countSpeed: number | boolean,
+    countSpeed: number | undefined,
     initialValue: number | boolean,
     newValue: number | boolean
 }

@@ -1,4 +1,5 @@
 import { ElementHandler } from './lib/ElementHandler';
+import { Counter } from './lib/Counter';
 
 class Main {
     id: string;
@@ -8,11 +9,10 @@ class Main {
         this.speed = countSpeed;
 
         const handler = new ElementHandler(this.id, this.speed);
-        console.log(handler.el);
-        if (handler.el !== null) {
-            handler.el.innerHTML = String(handler.initialValue);
-        }
+        const data = handler.getData();
+        const counter = new Counter(data);
+        counter.count();
     } 
 }
 
-let main = new Main('count', 5);
+let main = new Main('count', 50);
