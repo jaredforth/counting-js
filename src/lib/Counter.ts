@@ -26,13 +26,14 @@ export class Counter {
         //     // this.setValue(String(i));
         // }
         let start = Date.now();
-        const newValue = Number(this.data.newValue);
+        const speed = Number(this.data.countSpeed);
+        
         setInterval(() => {
             let delta = Date.now() - start;
-            let value = Math.floor(delta / newValue); 
+            let value = Math.floor(delta / speed); 
             if (value <= this.data.newValue) {
                 this.setValue(String(value));
             }
-        }, newValue);
+        }, speed);
     }
 }

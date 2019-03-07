@@ -15,4 +15,4 @@ class Main {
     } 
 }
 
-let main = new Main('count', 50);
+let main = new Main('count', 25);
