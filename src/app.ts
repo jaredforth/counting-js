@@ -4,10 +4,14 @@ class Main {
     id: string;
     speed: number
     constructor(elementId: string, countSpeed: number) {
-    this.id = elementId;
-    this.speed = countSpeed;
+        this.id = elementId;
+        this.speed = countSpeed;
 
-    const handler = new ElementHandler(this.id);
+        const handler = new ElementHandler(this.id, this.speed);
+        console.log(handler.el);
+        if (handler.el !== null) {
+            handler.el.innerHTML = String(handler.initialValue);
+        }
     } 
 }
 

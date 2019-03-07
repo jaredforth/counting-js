@@ -1,39 +1,31 @@
-import { CountData } from './CountData';
+import { ElementData } from './ElementData';
 
-export class ElementHandler {
-    el: HTMLElement;
-    value: number | boolean;
-    constructor(id: string) {
+export class ElementHandler implements ElementData {
+    el: HTMLElement | null;
+    countSpeed: number | boolean;
+    initialValue: number | boolean;
+    newValue: number | boolean;
+    constructor(id: string, speed: number) {
         const element: HTMLElement | null = document.getElementById(id);
         if (element) {
             this.el = element;
-            this.value = this.getNum();
+            this.countSpeed = speed;
+            this.newValue = this.getNum();
+            this.initialValue = 0;
         } else {
-            this.el = new HTMLElement;
-            this.value = this.getNum();
+            this.el = null;
+            this.countSpeed = false;
+            this.newValue = false;
+            this.initialValue = false;
         }
-        const data: CountData = {
-            el: this.el,
-            initialValue: this.value,
-            countSpeed: 5
-        } 
-        console.log(data);
     }
-    // getElement(id:string) {
-    //     if (document.getElementById(id) !== null) {
-    //         this.el = document.getElementById(id);
-    //     }
-    // }
-    // private isNull(el) {
-    //     if (this.el === null) {
-    //         return true
-    //     } else {
-    //         return false
-    //     }
-    // }
     private getNum() {
-        if (Number(this.el.innerHTML) !== NaN) {
-            return Number(this.el.innerHTML);
+        if (this.el !== null) {
+            if (Number(this.el.innerHTML) !== NaN) {
+                return Number(this.el.innerHTML);
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
