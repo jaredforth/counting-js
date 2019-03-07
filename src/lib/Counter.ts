@@ -17,17 +17,9 @@ export class Counter {
         }
     }
     public count() {
-        let i: number;
-        // for (i = Number(this.data.initialValue); i < this.data.newValue; i++) {
-        //     setTimeout(() => {
-        //         console.log("Waiting");
-        //     }, this.data.countSpeed);
-        //     console.log(i);
-        //     // this.setValue(String(i));
-        // }
         let start = Date.now();
         const speed = Number(this.data.countSpeed);
-        
+
         setInterval(() => {
             let delta = Date.now() - start;
             let value = Math.floor(delta / speed); 
