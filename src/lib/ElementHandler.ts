@@ -1,5 +1,3 @@
-// TODO: add error handling messages for case in which el.innerText is not a number
-
 import { ElementData } from './ElementData';
 
 export class ElementHandler implements ElementData {
@@ -17,7 +15,7 @@ export class ElementHandler implements ElementData {
         } else {
             this.el = null;
             this.countSpeed = undefined;
-            this.newValue = false;
+            this.newValue = this.getNum();
             this.initialValue = false;
         }
     }
@@ -32,7 +30,7 @@ export class ElementHandler implements ElementData {
     }
     private getNum() {
         if (this.el !== null) {
-            if (Number(this.el.innerHTML) !== NaN) {
+            if (Number(this.el.innerText) !== NaN) {
                 return Number(this.el.innerText);
             } else {
                 console.log(`${this.el.innerText} must be a valid number`);

@@ -7,7 +7,7 @@ export class Counter {
         this.setInitialValue();
     }
     private setInitialValue() {
-        if (this.data.el !== null) {
+        if (this.data.el !== null && this.data.newValue) {
             this.data.el.innerText = String(this.data.initialValue);
         } 
     }

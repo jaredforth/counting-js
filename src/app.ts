@@ -4,36 +4,29 @@ import { Counter } from './lib/Counter';
 class Count {
     id: string;
     speed: number;
-    el: HTMLElement;
+    el!: HTMLElement;
     constructor(elementId: string, countSpeed: number) {
         this.id = elementId;
         this.speed = countSpeed;
 
-        const handler = new ElementHandler(this.id, this.speed);        
-        const data = handler.getData();
-        console.log(data);
-
-        if (data.el !== null) {
+        if (document.getElementById(this.id)) {
+            const handler = new ElementHandler(this.id, this.speed);        
+            const data = handler.getData();
             const counter = new Counter(data);
             if (handler.el !== null) {
                 this.el = handler.el;
-            } else {
-                this.el = new HTMLElement;
-            }
+            } 
             this.listener(counter);
         } else {
-            this.el = new HTMLElement;
-            console.log("countting-js error: Element not found")
+            console.log(`counting-js error: Element with id ${this.id} not found`)
         }
     }
     private listener(counter: Counter) {
         let i = 0;
 
         const handle = this.onVisabilityChange(this.el, () => {
-            if (i === 0) {
+            if (i === 1) {
                 counter.count();
-            } else {
-                console.log(i);
             }
             i++;
         });
@@ -67,4 +60,4 @@ class Count {
     } 
 }
 
-let count = new Count('count', 500);
+let count = new Count('count', 50);
