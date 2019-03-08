@@ -1,7 +1,7 @@
 import { ElementHandler } from './lib/ElementHandler';
 import { Counter } from './lib/Counter';
 
-class Main {
+class Count {
     id: string;
     speed: number;
     el: HTMLElement;
@@ -11,15 +11,20 @@ class Main {
 
         const handler = new ElementHandler(this.id, this.speed);        
         const data = handler.getData();
-        const counter = new Counter(data);
+        console.log(data);
 
-        if (handler.el !== null) {
-            this.el = handler.el;
+        if (data.el !== null) {
+            const counter = new Counter(data);
+            if (handler.el !== null) {
+                this.el = handler.el;
+            } else {
+                this.el = new HTMLElement;
+            }
+            this.listener(counter);
         } else {
             this.el = new HTMLElement;
+            console.log("countting-js error: Element not found")
         }
-
-        this.listener(counter);
     }
     private listener(counter: Counter) {
         let i = 0;
@@ -62,4 +67,4 @@ class Main {
     } 
 }
 
-let main = new Main('count', 25);
+let count = new Count('count', 500);

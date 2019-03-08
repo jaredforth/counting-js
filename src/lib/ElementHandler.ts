@@ -39,6 +39,7 @@ export class ElementHandler implements ElementData {
                 return false;
             }
         } else {
+            console.log("The element must not be null");
             return false;
         }
     }
