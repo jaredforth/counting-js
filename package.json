@@ -2,9 +2,9 @@
   "name": "counting-js",
   "version": "1.0.2",
   "description": "A lightweight library that counts",
-  "main": "dist/app.js",
+  "main": "dist/counting.min.js",
   "scripts": {
-    "dev": "browserify src/app.ts -p [ tsify --noImplicitAny ] > dist/app.js",
+    "build": "uglifyjs -c -m -o dist/counting.min.js -- src/counting.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,8 +18,6 @@
   },
   "homepage": "https://github.com/jaredforth/counting-js#readme",
   "devDependencies": {
-    "browserify": "^16.2.3",
-    "tsify": "^4.0.1",
-    "typescript": "^3.3.3333"
+    "uglify-es": "^3.3.9"
   }
 }
