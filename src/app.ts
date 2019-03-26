@@ -9,6 +9,8 @@ class Count {
         this.id = elementId;
         this.speed = countSpeed;
 
+        console.log('init counter');
+
         if (document.getElementById(this.id)) {
             const handler = new ElementHandler(this.id, this.speed);        
             const data = handler.getData();
@@ -25,6 +27,11 @@ class Count {
         let i = 0;
 
         const handle = this.onVisabilityChange(this.el, () => {
+            console.log("Listener triggered" + i);
+            if (i === 0 && this.elementInViewport(this.el)) {
+                counter.count();
+                i = 2;
+            }
             if (i === 1) {
                 counter.count();
             }
@@ -60,4 +67,4 @@ class Count {
     } 
 }
 
-let count = new Count('count', 50);
+let count = new Count('count', 2);
