@@ -4,7 +4,7 @@
   "description": "A lightweight library that counts",
   "main": "dist/counting.min.js",
   "scripts": {
-    "build": "uglifyjs -c -m -o dist/counting.min.js -- src/counting.js",
+    "build": "uglifyjs -c -m -o dist/counting.min.js --source-map -- src/counting.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
