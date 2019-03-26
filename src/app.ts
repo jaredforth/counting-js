@@ -1,7 +1,7 @@
 import { ElementHandler } from './lib/ElementHandler';
 import { Counter } from './lib/Counter';
 
-class Count {
+export class Count {
     id: string;
     speed: number;
     el!: HTMLElement;
@@ -66,5 +66,3 @@ class Count {
         );
     } 
 }
-
-let count = new Count('count', 2);
