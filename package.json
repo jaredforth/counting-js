@@ -1,6 +1,6 @@
 {
   "name": "counting-js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A lightweight library that counts",
   "main": "dist/counting.min.js",
   "scripts": {
