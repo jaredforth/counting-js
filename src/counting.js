@@ -12,7 +12,7 @@ export default function Count(id, countSpeed) {
 
 function Handler(id, speed) {
     const el = document.getElementById(id);
-    if (getNum(el)) {
+    if (getNum(el) !== false) {
         return {
             "el": el,
             "countSpeed": speed,
@@ -20,6 +20,7 @@ function Handler(id, speed) {
             "initialValue": 0
         }
     } else {
+        console.log("Error with getNum on element " + el);
         return false;
     }
 }
