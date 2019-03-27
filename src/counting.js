@@ -1,7 +1,6 @@
 export default function Count(id, countSpeed) {
     if (document.getElementById(id)) {
         const handler = Handler(id, countSpeed);
-        console.log(handler);
         if (handler) {
             listener(handler);
         }
@@ -45,10 +44,11 @@ function Counter(data) {
     const speed = Number(newData.countSpeed);
     setInterval(() => {
         let delta = Date.now() - start;
-        let value = Math.floor(delta / speed); 
-        if (value <= newData.newValue) {
-            setValue(data, String(value));
+        let value = Math.round(delta / speed); 
+        if (value > newData.newValue) {
+            value = newData.newValue;
         }
+        setValue(data, value);
     }, speed);
 }
 
@@ -69,7 +69,6 @@ function listener(counter) {
     let i = 0;
 
     const handle = onVisabilityChange(counter.el, () => {
-        console.log("Listener triggered" + i);
         if (i === 0 && elementInViewport(counter.el)) {
             Counter(counter);
             i = 2;
