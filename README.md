@@ -12,7 +12,7 @@ Via NPM: `npm i counting-js`
 
 You can include _counting-js_ to use in your JavaScript file with: 
 
-`import Count from 'counting.min.js';`
+`import Count from 'counting-js';`
 
 Your JavaScript can be include in HTML: 
 
@@ -24,7 +24,7 @@ See the `demo` directory for an example.
 
 The `Count` function takes two parameters: `id`, which is the id of the element to count as a string, and `countSpeed`, which is the speed, in milliseconds at which to count. 
 
-If there exists an element with the id of `foo` that should count at 50ms, a call to `Count` would look like: `Count('foo', 50);`
+If there is element with the id of `foo` that should count at 50ms, a call to `Count` would look like: `Count('foo', 50);`
 
 The value to count to is taken from the inner HTML of the element with the given id, which must be a number, and it will count from 0.
 
