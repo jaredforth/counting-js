@@ -5,7 +5,7 @@ export default function Count(id, countSpeed) {
             listener(handler);
         }
     } else {
-        console.log(`counting-js error: Element with id ${id} not found`)
+        console.log('counting-js error: Element with id ' +  id +  ' not found')
     }
 }
 
@@ -29,7 +29,7 @@ function getNum(el) {
         if (Number(el.innerText) !== NaN) {
             return Number(el.innerText);
         } else {
-            console.log(`${el.innerText} must be a valid number`);
+            console.log(el.innerText + ' must be a valid number');
             return false;
         }
     } else {
