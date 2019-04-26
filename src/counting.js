@@ -88,7 +88,7 @@ function listener(counter) {
 
 function onVisabilityChange(el, callback) {
     let old;
-    return () => {
+    return function() {
         let visible = elementInViewport(el);
         if (visible !== old) {
             old = visible; 
