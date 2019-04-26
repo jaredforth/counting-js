@@ -2,9 +2,9 @@
   "name": "counting-js",
   "version": "1.0.5",
   "description": "A lightweight library that counts",
-  "main": "dist/counting.min.js",
+  "main": "dist/counting.js",
   "scripts": {
-    "build": "uglifyjs -c -m -o dist/counting.min.js --source-map -- src/counting.js",
+    "build": "cp -r src/* dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

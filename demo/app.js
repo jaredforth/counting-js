@@ -1,6 +1,6 @@
 // Import Count function
 
-import Count from '../dist/counting.min.js';
+import Count from '../dist/counting.js';
 
 // Create loop that selects all ids and passes 
 // a pseudorandom number to the countSpeed parameter
