@@ -5,7 +5,7 @@ export default function Count(id, countSpeed) {
             listener(handler);
         }
     } else {
-        console.log('counting-js error: Element with id ' +  id +  ' not found')
+        console.log(`counting-js error: Element with id ${id} not found`)
     }
 }
 

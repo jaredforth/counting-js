@@ -2,8 +2,9 @@
   "name": "counting-js",
   "version": "1.0.7",
   "description": "A lightweight library that counts",
-  "main": "counting.js",
+  "main": "dist/counting.js",
   "scripts": {
+    "build": "babel src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/jaredforth/counting-js/issues"
   },
-  "homepage": "https://github.com/jaredforth/counting-js#readme"
+  "homepage": "https://github.com/jaredforth/counting-js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3"
+  }
 }
