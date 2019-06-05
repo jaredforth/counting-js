@@ -4,6 +4,8 @@ _A lightweight library that counts_
 
 counting-js weighs in at 1.8KB, and provides a function with a simple API 
 
+![NPM Downloads](https://img.shields.io/npm/dm/counting-js.svg)
+
 ## Installation 
 
 Via NPM: `npm i counting-js`
