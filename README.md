@@ -1,10 +1,12 @@
+![npm](https://img.shields.io/npm/v/counting-js)
+![npm bundle size](https://img.shields.io/bundlephobia/min/counting-js)
+![NPM Downloads](https://img.shields.io/npm/dm/counting-js.svg)
+
 # counting-js
 
 _A lightweight library that counts_
 
 counting-js weighs in at 1.8KB, and provides a function with a simple API 
-
-![NPM Downloads](https://img.shields.io/npm/dm/counting-js.svg)
 
 ## Installation 
 
