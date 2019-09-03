@@ -5,6 +5,7 @@
   "main": "dist/counting.js",
   "scripts": {
     "build": "babel src -d dist",
+    "install": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
