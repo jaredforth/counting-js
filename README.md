@@ -1,6 +1,7 @@
-![npm](https://img.shields.io/npm/v/counting-js)
-![npm bundle size](https://img.shields.io/bundlephobia/min/counting-js)
-![NPM Downloads](https://img.shields.io/npm/dm/counting-js.svg)
+[!npm(https://www.npmjs.com/package/counting-js)](https://img.shields.io/npm/v/counting-js)
+[![Build Status](https://travis-ci.org/jaredforth/counting-js.svg?branch=master)](https://travis-ci.org/jaredforth/counting-js)
+[!npm bundle size(https://www.npmjs.com/package/counting-js)](https://img.shields.io/bundlephobia/min/counting-js)
+[!NPM Downloads(https://www.npmjs.com/package/counting-js)](https://img.shields.io/npm/dm/counting-js.svg)
 
 # counting-js
 
