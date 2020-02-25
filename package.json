@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/jaredforth/counting-js/issues"
   },
+  "keywords": [
+
+  ],
   "homepage": "https://github.com/jaredforth/counting-js#readme",
   "devDependencies": {
     "@babel/cli": "^7.4.3",
